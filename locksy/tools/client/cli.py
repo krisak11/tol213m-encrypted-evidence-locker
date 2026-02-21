@@ -15,8 +15,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from tools.client.api_client import LocksyClient
-
+from locksy.tools.client.api_client import LocksyClient
 
 def parse_verify(value: str) -> bool | str:
     if value.lower() == "true":
