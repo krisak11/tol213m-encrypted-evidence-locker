@@ -1,6 +1,6 @@
 # How to run:
 # 1. Start the server (in another terminal):
-#    $ uvicorn main:app --reload
+#    $ uvicorn main:app --reload --host 127.0.0.1 --port 8000
 # 2. Register a new user:
 #   python -m tools.client.cli register alice test1234
 # 3. Add a new item (evidence) for the user:
