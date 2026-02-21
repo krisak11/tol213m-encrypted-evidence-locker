@@ -7,12 +7,13 @@ import base64
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
+from locksy.api.settings import settings
 from locksy.services.auth import register, unlock_dek
 from locksy.services.locker import add_evidence, get_evidence, list_evidence
 
 router = APIRouter()
 
-DATABASE_PATH = "locksy.db" # Hardcoded path to SQLite db file for simplicity, later use environment variable or config file in production.
+DATABASE_PATH = settings.db_path
 
 # Pydantic models for request bodies for the API endpoints, 
 # including user registration, authentication, adding items, and retrieving items.
