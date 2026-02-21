@@ -30,7 +30,7 @@ def register(db_path: str, username: str, password: str) -> int:
     conn = connect(db_path)
     with conn:
         if get_user_by_username(conn, username):
-            raise ValueError("Username already exists.")
+            raise ValueError("Registration failed.")
 
         pw_hash = hash_password(password)
 
