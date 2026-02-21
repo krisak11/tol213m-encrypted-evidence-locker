@@ -1,3 +1,6 @@
+# locksy.api.settings
+# This module defines the Settings dataclass which holds configuration settings for the Locksy application.
+
 from __future__ import annotations
 
 import os
